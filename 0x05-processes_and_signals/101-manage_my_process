@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #creating a daemon subprocesses
 
-sudo "/lib/lsb/init-functions"
+". /lib/lsb/init-functions"
 FILE=/var/run/my_process.pid
 
 start() {
