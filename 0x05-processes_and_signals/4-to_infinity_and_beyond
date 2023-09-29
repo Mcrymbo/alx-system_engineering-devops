@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# writing a bash script that runs indefinately
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done

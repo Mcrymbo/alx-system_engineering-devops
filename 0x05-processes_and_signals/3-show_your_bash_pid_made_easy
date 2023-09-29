@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# displays the name of the pid along with the name if it is bash
+pgrep -l bash
