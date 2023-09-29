@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #creating a daemon subprocesses
+# shellcheck disable=SC1091
 
 . /lib/lsb/init-functions
 
