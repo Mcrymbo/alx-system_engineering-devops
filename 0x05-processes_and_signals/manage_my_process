@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#messaging to file
+while true; do
+	echo "I am alive!" >> sudo /tmp/my_process
+	sleep 2
+done
