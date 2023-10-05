@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displaying listening ports
+sudo ss -tunlp
