@@ -3,6 +3,6 @@
 exec { 'pkill killmenow':
   path     => '/usr/bin',
   command  => 'pkill killmenow',
-  provider => shell,
-  return   => [0, 1]
+  provider => 'shell',
+  returns   => [0, 1],
 }
