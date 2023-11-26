@@ -1,17 +1,16 @@
 # Used for updating configuaration file
-
 include stdlib
 
-file_line { 'Identity file':
-  ensure  => 'present',
+file_line { 'Turn off passwd auth':
+  ensure  => present,
   path    => '/etc/ssh/ssh_config',
-  line    => '    IdenityFile ~/.ssh/school',
+  line    => '    PasswordAuthentication no',
   replace => true,
 }
 
-file_line { 'password':
-  ensure  => 'present',
+file_line { 'Delare identity file':
+  ensure  => present,
   path    => '/etc/ssh/ssh_config',
-  line    => 'PasswordAuthentication no',
+  line    => '     IdentityFile ~/.ssh/school',
   replace => true,
 }
