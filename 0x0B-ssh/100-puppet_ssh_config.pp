@@ -1,7 +1,17 @@
 # Used for updating configuaration file
 
-exec { 'echo':
-  path    => 'usr/bin:/bin',
-  command => 'echo "    IdentityFile ~/.ssh/school\n PasswordAuthentication no" >> sudo etc/ssh/ssh_conf',
-  returns => [0,1],
+include stdlib
+
+file_line { 'Identity file':
+  ensure  => 'present',
+  path    => '/etc/ssh/ssh_config',
+  line    => '    IdenityFile ~/.ssh/school',
+  replace => true,
+}
+
+file_line { 'password':
+  ensure  => 'present',
+  path    => '/etc/ssh/ssh_config',
+  line    => 'PasswordAuthentication no',
+  replace => true,
 }
