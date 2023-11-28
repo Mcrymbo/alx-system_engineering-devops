@@ -5,6 +5,15 @@ apt-get install -y nginx
 
 echo 'Hello World!' > /var/www/html/index.nginx-debian.html
 
-sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/Mcrymbo permanent;/" /etc/nginx/sites-available/default
+printf %s "server {
+  listen 80;
+  listen [::]:80 default_server;
+
+  root   /etc/nginx/html;
+  index  index.html index.htm;
+
+  location /redirect_me {
+    return 301 htpps://github.com/Mcrymbo/;
+  }" > /etc/nginx/sites-available/default
 
 service nginx start
