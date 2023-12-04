@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # install and configure HAproxy on lb-01
-
 apt-get -y install software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-2.0
 apt-get -y update
