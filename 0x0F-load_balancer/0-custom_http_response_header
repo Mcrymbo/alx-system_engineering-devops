@@ -2,14 +2,14 @@
 # scrip to install nginx on a server
 apt-get update
 apt-get install -y nginx
-
 mkdir -p /etc/nginx/html
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+echo 'Hello World!' > /etc/nginx/html/index.html
 echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
 
 printf %s "server {
   listen 80;
   listen [::]:80 default_server;
+  add_header X-Served-By $(hostname);
   root   /etc/nginx/html;
   index  index.htm index.html;
 
@@ -21,10 +21,6 @@ printf %s "server {
   location /404.html {
     root /etc/nginx/html;
     internal;
-  }
-
-  location / {
-    add_header X-Served-By $(hostname);
   }
 }" > /etc/nginx/sites-available/default
 
