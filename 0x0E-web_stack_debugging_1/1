@@ -1,0 +1,5 @@
+sed: couldn't open temporary file /etc/nginx/sites-enabled/sedroTdFJ: Permission denied
+sed: couldn't open temporary file /etc/nginx/sites-enabled/sedmoGVZJ: Permission denied
+sed: couldn't open temporary file /etc/nginx/sites-available/sedmj1cnQ: Permission denied
+Failed to restart nginx.service: Interactive authentication required.
+See system logs and 'systemctl status nginx.service' for details.
