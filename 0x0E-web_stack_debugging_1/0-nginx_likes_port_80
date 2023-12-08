@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # sets listening port to 80
 rm /etc/nginx/sites-enabled/default
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-e    nabled/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
