@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # generates MYSQL dump and compresses it
-mysqldump --all-databases -u root -p "$1" > backup.sql
+mysqldump --all-databases -u root -p"$1" > backup.sql
 tar -czvf "$(date '+%d-%m-%Y').tar.gz" backup.sql
