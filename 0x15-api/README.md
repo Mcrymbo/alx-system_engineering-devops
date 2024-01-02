@@ -1,5 +1,5 @@
-# 0x15-api
-This is a readme file for api
+#0x15-api
+This is a readme file for introduction to api for alx-project
 
 ## IT coveres
 * Friends don’t let friends program in shell script
