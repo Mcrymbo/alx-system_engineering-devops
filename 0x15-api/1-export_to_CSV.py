@@ -3,9 +3,9 @@
 Python script, using REST API for employee ID
 and return returns information about his/her TODO list progress
 """
+import csv
 import requests
 import sys
-import csv
 
 
 if __name__ == '__main__':

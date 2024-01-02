@@ -10,13 +10,14 @@ import sys
 if __name__ == '__main__':
     base_url = 'https://jsonplaceholder.typicode.com/'
 
-    user = '{}users/{}'.format(base_url, sys.argv[1])
+    user_id = sys.argv[1]
+    user = '{}users/{}'.format(base_url, user_id)
     user_res = requests.get(user)
     user_obj = user_res.json()
     print('Employee {} is done with tasks'
-          .format(user_obj.get('name')), end='')
+          .format(user_obj.get('name')), end="")
 
-    todos = '{}todos?userId={}'.format(base_url, sys.argv[1])
+    todos = '{}todos?userId={}'.format(base_url, user_id)
     todo_res = requests.get(todos)
     todo_obj = todo_res.json()
 
