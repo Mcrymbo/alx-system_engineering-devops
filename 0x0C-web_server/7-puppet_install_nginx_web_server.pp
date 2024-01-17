@@ -1,7 +1,4 @@
 # installing and configuring nginx
-
-include stdlib
-
 package { 'nginx':
   ensure => installed,
 }
