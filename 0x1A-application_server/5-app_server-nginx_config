@@ -1,9 +1,11 @@
 server {
   listen 80 default_server;
   listen [::]:80 default_server;
-
   add_header X-Served-BY $HOSTNAME;
-  root  /var/www/html;
+  server_name localhost 100.26.121.3;
+
+  root /home/ubuntu/AirBnB_clone_v4/web_dynamic;
+
   index index.html index.htm index.nginx-debian.html;
 
   location /hbnb_static {
@@ -25,6 +27,7 @@ server {
     include proxy_params;
     proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
   }
+
   location /airbnb-dynamic/number_odd_or_even/ {
     include proxy_params;
     proxy_pass http://0.0.0.0:5001/number_odd_or_even/;
@@ -33,6 +36,9 @@ server {
   location /api/ {
     include proxy_params;
     proxy_pass http://0.0.0.0:5002/api/;
+  }
+
+  location /static {
   }
 
   location / {
